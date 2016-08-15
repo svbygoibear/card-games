@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\CardNames.cs" />
+    <Compile Include="Enums\Game.cs" />
     <Compile Include="Enums\Suit.cs" />
     <Compile Include="Interfaces\ICard.cs" />
     <Compile Include="Interfaces\IDeck.cs" />

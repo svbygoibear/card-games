@@ -42,6 +42,7 @@
     <Compile Include="Models\FrenchCard.cs" />
     <Compile Include="Models\FrenchDeck.cs" />
     <Compile Include="Models\Hand.cs" />
+    <Compile Include="Models\PlayBase.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

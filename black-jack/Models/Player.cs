@@ -16,6 +16,7 @@ namespace black_jack.Models {
         private bool isDealer;
         private IHand pHand;
         private Double bet;
+        private int handTotal;
         #endregion
 
         //properties
@@ -39,6 +40,11 @@ namespace black_jack.Models {
             get { return name; }
             set { name = value; OnPropertyChanged("Name"); }
         }
+
+        public int HandTotal {
+            get { return handTotal; }
+            set { handTotal = value; OnPropertyChanged("HandTotal"); }
+        }
         #endregion
 
         //constructor
@@ -47,6 +53,25 @@ namespace black_jack.Models {
             this.Name = playerName;
             this.IsDealer = isDealer;
             this.PHand = playerHand;
+            CalculateHandTotal();
+        }
+        #endregion
+
+        //public methods
+        #region public methods
+        /// <summary>
+        /// Used to calculate the hand total of a player
+        /// </summary>
+        public void CalculateHandTotal() {
+            int hTotal = 0;
+            bool hasAce = false;
+            this.PHand.Cards.ForEach(card => {
+                hTotal += card.CardNameIndex;
+
+                if (card.CardNameIndex == 1)
+                    hasAce = true;
+            });
+            HandTotal = hTotal > 21 && hasAce == true ? hTotal - 10 : hTotal;
         }
         #endregion
 
