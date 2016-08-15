@@ -96,7 +96,7 @@ namespace black_jack.Models {
                     break;
             }
 
-            return Enum.GetName(typeof(FrenchCardName), this.CardName).Substring(0, 1) + " " + suit;
+            return Enum.GetName(typeof(FrenchCardName), CardName).Substring(0, 1) + " " + suit;
         }
 
         public override bool Equals(object obj) {

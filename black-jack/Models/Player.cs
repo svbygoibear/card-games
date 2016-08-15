@@ -50,9 +50,9 @@ namespace black_jack.Models {
         //constructor
         #region constructor
         public Player(string playerName, bool isDealer, Hand playerHand) {
-            this.Name = playerName;
-            this.IsDealer = isDealer;
-            this.PHand = playerHand;
+            Name = playerName;
+            IsDealer = isDealer;
+            PHand = playerHand;
             CalculateHandTotal();
         }
         #endregion

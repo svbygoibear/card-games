@@ -23,7 +23,7 @@ namespace black_jack.Models {
         //constructor
         #region constructor
         public Hand(List<ICard> cards) {
-            this.Cards = cards;
+            Cards = cards;
         }
         #endregion
 
